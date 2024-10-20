@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_digit_recognizer/ml/data_frame_loader.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +11,9 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    DataFrameLoader.loadTraining();
+    DataFrameLoader.loadValidation();
+
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
